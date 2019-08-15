@@ -1,0 +1,809 @@
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-family: "Poppins";
+  background-color: #011f26;
+}
+
+/* ==========================================================================
+   ==========================================================================
+   Desktop
+   ==========================================================================
+   ========================================================================== */
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(5rem, auto);
+  grid-gap: 1rem;
+  margin: 0 auto;
+  grid-template-areas:
+    "header nav nav nav ."
+    "main main main main main"
+    "section section section section aside"
+    "section section section section aside"
+    "footer footer footer footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --------------------------------Nav bar------------------------------- */
+
+nav {
+  grid-area: nav;
+}
+nav a {
+  text-decoration: none;
+  color: #8fadbf;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-size: 2rem;
+  text-align: center;
+  padding: 1.25rem 1.87rem;
+}
+.menu {
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: (1rem, auto);
+  grid-gap: 1rem;
+  grid-template-areas:
+    "x x x x x x"
+    "H contact medical schedule emergency about";
+}
+.nothing {
+  grid-area: x;
+}
+.H {
+  grid-area: home;
+}
+.Contact {
+  grid-area: contact;
+}
+.Medical {
+  grid-area: medical;
+}
+.Schedule {
+  grid-area: schedule;
+}
+.Emergency {
+  grid-area: emergency;
+}
+.About {
+  grid-area: about;
+}
+
+.Home:hover {
+  border-top: 5px solid #0578a6;
+  background-color: #8fadbf;
+  box-shadow: #d6ffe0;
+  border-radius: 3%;
+  color: #011f26;
+}
+
+.Contact:hover {
+  border-top: 5px solid #0578a6;
+  background-color: #8fadbf;
+  box-shadow: #d6ffe0;
+  border-radius: 3%;
+  color: #011f26;
+}
+
+.Medical:hover {
+  border-top: 5px solid #0578a6;
+  background-color: #8fadbf;
+  box-shadow: #d6ffe0;
+  border-radius: 3%;
+  color: #011f26;
+}
+.Schedule:hover {
+  border-top: 5px solid #0578a6;
+  background-color: #8fadbf;
+  box-shadow: #d6ffe0;
+  border-radius: 3%;
+  color: #011f26;
+}
+
+.Emergency:hover {
+  border-top: 5px solid #0578a6;
+  background-color: #f34949;
+  box-shadow: #d6ffe0;
+  border-radius: 3%;
+  color: #011f26;
+}
+
+.About:hover {
+  border-top: 5px solid #0578a6;
+  background-color: #8fadbf;
+  box-shadow: #d6ffe0;
+  border-radius: 3%;
+  color: #011f26;
+}
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------main--------------------------------- */
+main {
+  grid-area: main;
+  text-decoration: none;
+  padding: 1.25rem 1.87rem;
+  color: #8fadbf;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-size: 2rem;
+  text-align: center;
+  border: 0.1rem solid #8fadbf;
+}
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------aside-------------------------------- */
+
+aside {
+  display: grid;
+  grid-area: aside;
+  background-color: #8fadbf;
+  border: 0.5rem solid #024059;
+  border-radius: 1%;
+  grid-template-columns: 3fr 1fr;
+  grid-auto-rows: minmax(1rem, auto);
+  grid-template-areas:
+    "imgAddress address"
+    "imgMail mail"
+    "imgCall call"
+    "imgSms sms";
+}
+
+.imgAdresse {
+  grid-area: imgAddress;
+}
+.imgMail {
+  grid-area: imgMail;
+}
+.imgCall {
+  grid-area: imgCall;
+}
+.imgSms {
+  grid-area: imgSms;
+}
+.address {
+  grid-area: address;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  text-align: center;
+}
+.mail {
+  grid-area: mail;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  text-align: center;
+}
+.call {
+  grid-area: call;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  text-align: center;
+}
+.sms {
+  grid-area: sms;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.icon_index {
+  text-decoration: none;
+  padding: 1.25rem 1.87rem;
+  color: #024059;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-size: 4rem;
+  text-align: center;
+}
+/* ---------------------------------------------------------------------- */
+/* --------------------------------section------------------------------- */
+
+section {
+  display: grid;
+  grid-area: section;
+  background-color: #8fadbf;
+  border: 0.5rem solid #024059;
+  border-radius: 1%;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(1rem, auto);
+  grid-template-areas:
+    "p-doc1 p-doc2"
+    "doctor1 doctor2";
+}
+.doctor1 {
+  grid-area: doctor1;
+  padding-left: 4.4rem;
+}
+
+.doctor2 {
+  grid-area: doctor2;
+  padding-left: 4.4rem;
+}
+.p-doc1 {
+  grid-area: p-doc1;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.p-doc1::first-letter {
+  initial-letter: 2;
+  color: #023e73;
+  font-size: 5rem;
+  line-height: 10rem;
+  float: left;
+}
+.p-doc2 {
+  grid-area: p-doc2;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.p-doc2::first-letter {
+  initial-letter: 2;
+  color: #023e73;
+  font-size: 5rem;
+  line-height: 10rem;
+  float: left;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --------------------------------footer-------------------------------- */
+* footer {
+  grid-area: footer;
+  text-decoration: none;
+  margin: 0;
+  padding: 1.25rem 1.87rem;
+  color: #8fadbf;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Contact page
+   ========================================================================== */
+
+.contact_content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(5rem, auto);
+  grid-gap: 1rem;
+  margin: 0 auto;
+  grid-template-areas:
+    "header nav nav nav ."
+    "main main main main main"
+    "section section section section aside_contact"
+    "section section section section aside_contact"
+    "footer footer footer footer footer";
+}
+.map {
+  display: flex;
+  justify-content: center;
+}
+.aside_contact {
+  grid-area: aside_contact;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  grid-auto-rows: minmax(1rem, 4rem);
+  grid-template-areas:
+    "infoA infoA "
+    "infoCall infoCall"
+    "infoSms infoSms"
+    "infoM infoM"
+    "formN formN"
+    "formS formS"
+    "formM formM"
+    "formMsg formMsg"
+    "formSub formSub";
+}
+.form {
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+.info_mail {
+  grid-area: infoM;
+  color: #011f26;
+  font-family: "Poppins";
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+
+.info_address {
+  grid-area: infoA;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+
+.formName {
+  grid-area: formN;
+}
+.formSurname {
+  grid-area: formS;
+}
+.formMail {
+  grid-area: formM;
+}
+.formMsg {
+  grid-area: formMsg;
+}
+.formSubmit {
+  grid-area: formSub;
+}
+
+.info_Call {
+  grid-area: infoCall;
+  color: #011f26;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+
+.info_Sms {
+  grid-area: infoSms;
+  color: #011f26;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+
+/* ==========================================================================
+   Medical discipline page
+   ========================================================================== */
+.medical_content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(5rem, auto);
+  grid-gap: 1rem;
+  margin: 0 auto;
+  grid-template-areas:
+    "header nav nav nav ."
+    "main main main main main"
+    "section section section section section"
+    "section section section section section"
+    "footer footer footer footer footer";
+}
+.medical {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(1fr, 1rem);
+  grid-gap: 0rem;
+  grid-template-areas:
+    "psychology doctorI Speech_Therapy doctorE"
+    "p-docI p-docI p-docE p-docE"
+    "doctolib1 doctolib1 doctolib2 doctolib2";
+}
+.doctorI {
+  grid-area: doctorI;
+  display: flex;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  justify-content: center;
+  align-self: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+.doctorE {
+  grid-area: doctorE;
+  display: flex;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  justify-content: center;
+  align-self: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+.psychology {
+  grid-area: psychology;
+}
+.Speech_Therapy {
+  grid-area: Speech_Therapy;
+}
+.doctolib1 {
+  grid-area: doctolib1;
+}
+.doctolib2 {
+  grid-area: doctolib2;
+}
+.doctolib {
+  text-decoration: none;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 2.2rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+  border: 0.1rem solid #011f26;
+}
+.p-docI {
+  grid-area: p-docI;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+.p-docI::first-letter {
+  initial-letter: 2;
+  color: #023e73;
+  font-size: 5rem;
+  line-height: 10rem;
+  float: left;
+}
+.p-docE {
+  grid-area: p-docE;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+.p-docE::first-letter {
+  initial-letter: 2;
+  color: #023e73;
+  font-size: 5rem;
+  line-height: 10rem;
+  float: left;
+}
+
+/* ==========================================================================
+   Schedule page
+   ========================================================================== */
+.schedule_content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(5rem, auto);
+  grid-gap: 0rem;
+  margin: 0 auto;
+  grid-template-areas:
+    "header nav nav nav ."
+    "main main main main main"
+    "section section section section"
+    "section section section section"
+    "footer footer footer footer footer";
+}
+.schedule {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(1fr, 1rem);
+  grid-gap: 2rem;
+  grid-template-areas:
+    "doctor1_s doctor2_s"
+    "schedule1 schedule2"
+    "appointment1 appointment2";
+}
+.schedule1 {
+  grid-area: schedule1;
+}
+.schedule2 {
+  grid-area: schedule2;
+}
+.doctor1_schedule {
+  grid-area: doctor1_s;
+  padding-left: 15rem;
+}
+.doctor2_schedule {
+  grid-area: doctor2_s;
+  padding-left: 17.1rem;
+}
+.appointment1 {
+  grid-area: appointment1;
+  padding-left: 29rem;
+}
+.appointment2 {
+  grid-area: appointment2;
+  padding-left: 30rem;
+  padding-bottom: 2.7rem;
+}
+th {
+  text-align: center;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  justify-content: center;
+  align-self: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+td {
+  text-align: center;
+  letter-spacing: 1rem;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  justify-content: center;
+  align-self: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+
+/* ==========================================================================
+   emergency page
+   ========================================================================== */
+.emergency_content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(5rem, auto);
+  grid-gap: 1rem;
+  margin: 0 auto;
+  grid-template-areas:
+    "header nav nav nav ."
+    "main main main main main"
+    "emergency emergency emergency emergency emergency"
+    "emergency emergency emergency emergency emergency"
+    "footer footer footer footer footer";
+}
+.emergency {
+  grid-area: emergency;
+  display: grid;
+  grid-gap: 0rem;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(1fr 1rem);
+  grid-template-areas:
+    "icoe icoe icoe icoe"
+    "pca pca pca pca"
+    ". a15 samu ."
+    ". a18 ff ."
+    ". a112 em ."
+    ". a17 po ."
+    ". a119 cid ."
+    ". a3919 dv .";
+}
+.icoe {
+  grid-area: icoe;
+  text-align: center;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 2.5rem;
+}
+.pca {
+  grid-area: pca;
+  text-align: center;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 2.5rem;
+}
+.a15 {
+  grid-area: a15;
+  text-align: center;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 2rem;
+  text-decoration: none;
+}
+.a18 {
+  grid-area: a18;
+  text-align: center;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 2rem;
+  text-decoration: none;
+}
+.a112 {
+  grid-area: a112;
+  text-align: center;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 2rem;
+  text-decoration: none;
+}
+.a17 {
+  grid-area: a17;
+  text-align: center;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 2rem;
+  text-decoration: none;
+}
+.a119 {
+  grid-area: a119;
+  text-align: center;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 2rem;
+  text-decoration: none;
+}
+.a3919 {
+  grid-area: a3919;
+  text-align: center;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 2rem;
+  text-decoration: none;
+}
+.samu {
+  grid-area: samu;
+  text-align: left;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  padding-bottom: 0.9rem;
+}
+.ff {
+  grid-area: ff;
+  text-align: left;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  padding-bottom: 0.9rem;
+}
+.em {
+  grid-area: em;
+  text-align: left;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  padding-bottom: 0.9rem;
+}
+.po {
+  grid-area: po;
+  text-align: left;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  padding-bottom: 0.9rem;
+}
+.cid {
+  grid-area: cid;
+  text-align: left;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  padding-bottom: 0.9rem;
+}
+.dv {
+  grid-area: dv;
+  text-align: left;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  padding-bottom: 0.9rem;
+}
+/* ==========================================================================
+   About us page
+   ========================================================================== */
+.aboutUs_content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(5rem, auto);
+  grid-gap: 1rem;
+  margin: 0 auto;
+  grid-template-areas:
+    "header nav nav nav ."
+    "main main main main main"
+    "aboutUs aboutUs aboutUs aboutUs aboutUs"
+    "aboutUs aboutUs aboutUs aboutUs aboutUs"
+    "footer footer footer footer footer";
+}
+
+.aboutUs {
+  grid-area: aboutUs;
+  display: grid;
+  grid-gap: 0rem;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(1fr 1rem);
+  grid-template-areas:
+    "logo_about p1_about p1_about p1_about"
+    ". p2_about p2_about p2_about"
+    ". . p_name p_name";
+}
+.logo_about {
+  grid-area: logo_about;
+}
+.p1_about {
+  grid-area: p1_about;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  text-align: justify;
+  padding-right: 40rem;
+  padding-top: 2.4rem;
+}
+.p1_about::first-letter {
+  initial-letter: 2;
+  color: #023e73;
+  font-size: 5rem;
+  line-height: 10rem;
+  float: left;
+}
+.p2_about {
+  grid-area: p2_about;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  text-align: justify;
+  padding-right: 40rem;
+}
+.p2_about::first-letter {
+  initial-letter: 2;
+  color: #023e73;
+  font-size: 5rem;
+  line-height: 10rem;
+  float: left;
+}
+.p_name {
+  grid-area: p_name;
+  color: #011f26;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  text-align: justify;
+  padding-left: 37.1rem;
+  padding-bottom: 2rem;
+}
