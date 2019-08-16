@@ -248,7 +248,7 @@ Smartphone
     text-align: justify;
     padding-right: 3rem;
   }
-  .p-doc2::first-letter {
+  .p-doc1::first-letter {
     initial-letter: 2;
     color: #023e73;
     font-size: 5rem;
