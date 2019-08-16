@@ -17,6 +17,7 @@ Smartphone
    ==========================================================================
    ==========================================================================
    ========================================================================== */
+
 @media screen and (max-width: 767px) {
   /* ==========================================================================
        home page
@@ -27,45 +28,31 @@ Smartphone
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav nav . . header"
-      "aside aside aside aside aside"
-      "main main main main main"
-      "section section section section section"
-      "section section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav nav . . header" "aside aside aside aside aside" "main main main main main" "section section section section section" "section section section section section" "footer footer footer footer footer";
   }
-
   header {
     grid-area: header;
   }
-
   /* ---------------------------------------------------------------------- */
   /* --------------------------------Nav bar------------------------------- */
   /* burger menu */
   a {
     text-decoration: none;
     color: #011f26;
-
     transition: color 0.3s ease;
   }
-
   a:hover {
     color: potato;
   }
-
   .menuToggle {
     display: block;
     position: fixed;
     top: 7rem;
     left: 1rem;
-
     z-index: 1;
-
     -webkit-user-select: none;
     user-select: none;
   }
-
   .menuToggle input {
     display: block;
     width: 7rem;
@@ -73,79 +60,59 @@ Smartphone
     position: absolute;
     top: -0.7rem;
     left: -0.5rem;
-
     cursor: pointer;
-
     opacity: 0;
     z-index: 2;
-
     -webkit-touch-callout: none;
   }
-
   .menuToggle span {
     display: block;
     width: 3.3rem;
     height: 0.4rem;
     margin-bottom: 0.5rem;
     position: relative;
-
     background: #cdcdcd;
     border-radius: 0.3rem;
-
     z-index: 1;
-
     transform-origin: 0.4rem 0;
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
-
   .menuToggle span:first-child {
     transform-origin: 0% 0%;
   }
-
   .menuToggle span:nth-last-child(2) {
     transform-origin: 0% 100%;
   }
-
-  .menuToggle input:checked ~ span {
+  .menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-0.2rem, -0.1rem);
     background: #232323;
   }
-
-  .menuToggle input:checked ~ span:nth-last-child(3) {
+  .menuToggle input:checked~span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
-
-  .menuToggle input:checked ~ span:nth-last-child(2) {
+  .menuToggle input:checked~span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
-
   .menu1 {
     position: absolute;
     width: 30rem;
     margin: -10rem 0 0 -5rem;
     padding: 5rem;
     padding-top: 12.5rem;
-
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-
   .menu1 li {
     padding: 1rem 0;
     font-size: 2.2rem;
   }
-
-  .menuToggle input:checked ~ ul {
+  .menuToggle input:checked~ul {
     transform: none;
   }
   .Home .Contact .Medical .Schedule .Emergency .About {
@@ -166,7 +133,6 @@ Smartphone
   }
   /* ---------------------------------------------------------------------- */
   /* ---------------------------------aside-------------------------------- */
-
   aside {
     display: grid;
     grid-area: aside;
@@ -175,11 +141,8 @@ Smartphone
     border-radius: 1%;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(1rem, auto);
-    grid-template-areas:
-      "imgAddress imgMail"
-      "imgCall imgSms ";
+    grid-template-areas: "imgAddress imgMail" "imgCall imgSms ";
   }
-
   .imgAdresse {
     grid-area: imgAddress;
   }
@@ -213,10 +176,8 @@ Smartphone
     font-size: 4rem;
     text-align: center;
   }
-
   /* ---------------------------------------------------------------------- */
   /* --------------------------------section------------------------------- */
-
   section {
     display: grid;
     grid-area: section;
@@ -225,18 +186,11 @@ Smartphone
     border-radius: 1%;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(1rem, auto);
-    grid-template-areas:
-      "p-doc1"
-      "p-doc1"
-      "doctor1"
-      "p-doc2"
-      "p-doc2"
-      "doctor2";
+    grid-template-areas: "p-doc1" "p-doc1" "doctor1" "p-doc2" "p-doc2" "doctor2";
   }
   .doctor1 {
     grid-area: doctor1;
   }
-
   .doctor2 {
     grid-area: doctor2;
   }
@@ -270,7 +224,6 @@ Smartphone
     line-height: 10rem;
     float: left;
   }
-
   /* ---------------------------------------------------------------------- */
   /* --------------------------------footer-------------------------------- */
   footer {
@@ -291,22 +244,14 @@ Smartphone
   /* ==========================================================================
        Contact page
        ========================================================================== */
-
   .contact_content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "aside_contact aside_contact aside_contact aside_contact aside_contact"
-      "main main main main main"
-      "section section section section section"
-      "section section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "aside_contact aside_contact aside_contact aside_contact aside_contact" "main main main main main" "section section section section section" "section section section section section" "footer footer footer footer footer";
   }
-
   .gmap {
     position: relative;
     padding-bottom: 70%;
@@ -325,9 +270,7 @@ Smartphone
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(1rem, auto);
-    grid-template-areas:
-      "imgAddress imgMail"
-      "imgCall imgSms ";
+    grid-template-areas: "imgAddress imgMail" "imgCall imgSms ";
   }
   .form {
     display: none;
@@ -335,15 +278,12 @@ Smartphone
   .info_mail {
     display: none;
   }
-
   .info_address {
     display: none;
   }
-
   .info_Call {
     display: none;
   }
-
   .info_Sms {
     display: none;
   }
@@ -365,27 +305,14 @@ Smartphone
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "section section section section section"
-      "section section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "section section section section section" "section section section section section" "footer footer footer footer footer";
   }
   .medical {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(1fr, 1rem);
     grid-gap: 0rem;
-    grid-template-areas:
-      "psychology"
-      "doctorI"
-      "p-docI"
-      "doctolib1"
-      "Speech_Therapy"
-      "doctorE"
-      "p-docE"
-      "doctolib2";
+    grid-template-areas: "psychology" "doctorI" "p-docI" "doctolib1" "Speech_Therapy" "doctorE" "p-docE" "doctolib2";
   }
   .doctorI {
     grid-area: doctorI;
@@ -487,25 +414,14 @@ Smartphone
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 0rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "section section section section"
-      "section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "section section section section" "section section section section" "footer footer footer footer footer";
   }
   .schedule {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(1fr, 1rem);
     grid-gap: 1rem;
-    grid-template-areas:
-      "doctor1_s"
-      "schedule1"
-      "appointment1"
-      "doctor2_s"
-      "schedule2"
-      "appointment2";
+    grid-template-areas: "doctor1_s" "schedule1" "appointment1" "doctor2_s" "schedule2" "appointment2";
   }
   .schedule1 {
     grid-area: schedule1;
@@ -525,7 +441,6 @@ Smartphone
   .appointment2 {
     grid-area: appointment2;
   }
-
   th {
     text-align: center;
     color: #011f26;
@@ -548,12 +463,7 @@ Smartphone
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "emergency emergency emergency emergency emergency"
-      "emergency emergency emergency emergency emergency"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "emergency emergency emergency emergency emergency" "emergency emergency emergency emergency emergency" "footer footer footer footer footer";
   }
   .emergency {
     grid-area: emergency;
@@ -562,15 +472,7 @@ Smartphone
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(1fr 1rem);
-    grid-template-areas:
-      "icoe icoe icoe icoe"
-      "pca pca pca pca"
-      ". a15 samu ."
-      ". a18 ff ."
-      ". a112 em ."
-      ". a17 po ."
-      ". a119 cid ."
-      ". a3919 dv .";
+    grid-template-areas: "icoe icoe icoe icoe" "pca pca pca pca" ". a15 samu ." ". a18 ff ." ". a112 em ." ". a17 po ." ". a119 cid ." ". a3919 dv .";
   }
   .icoe {
     grid-area: icoe;
@@ -691,24 +593,15 @@ Smartphone
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "aboutUs aboutUs aboutUs aboutUs aboutUs"
-      "aboutUs aboutUs aboutUs aboutUs aboutUs"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "aboutUs aboutUs aboutUs aboutUs aboutUs" "aboutUs aboutUs aboutUs aboutUs aboutUs" "footer footer footer footer footer";
   }
-
   .aboutUs {
     grid-area: aboutUs;
     display: grid;
-
     margin: 0;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(1fr 1rem);
-    grid-template-areas:
-      "p1_about"
-      "p2_about";
+    grid-template-areas: "p1_about" "p2_about";
   }
   .logo_about {
     display: none;
@@ -748,17 +641,19 @@ Smartphone
     display: none;
   }
 }
+
 /* ==========================================================================
    ==========================================================================
    ==========================================================================
    ==========================================================================
    ==========================================================================
-Touch pad
+Tablet
    ==========================================================================
    ==========================================================================
    ==========================================================================
    ==========================================================================
    ========================================================================== */
+
 @media screen and (min-width: 768px) and (max-width: 1067px) {
   /* ==========================================================================
      home page
@@ -769,45 +664,31 @@ Touch pad
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav nav . . header"
-      "aside aside aside aside aside"
-      "main main main main main"
-      "section section section section section"
-      "section section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav nav . . header" "aside aside aside aside aside" "main main main main main" "section section section section section" "section section section section section" "footer footer footer footer footer";
   }
-
   header {
     grid-area: header;
   }
-
   /* ---------------------------------------------------------------------- */
   /* --------------------------------Nav bar------------------------------- */
   /* burger */
   a {
     text-decoration: none;
     color: #011f26;
-
     transition: color 0.3s ease;
   }
-
   a:hover {
     color: potato;
   }
-
   .menuToggle {
     display: block;
     position: fixed;
     top: 7rem;
     left: 1rem;
-
     z-index: 1;
-
     -webkit-user-select: none;
     user-select: none;
   }
-
   .menuToggle input {
     display: block;
     width: 7rem;
@@ -815,79 +696,59 @@ Touch pad
     position: absolute;
     top: -0.7rem;
     left: -0.5rem;
-
     cursor: pointer;
-
     opacity: 0;
     z-index: 2;
-
     -webkit-touch-callout: none;
   }
-
   .menuToggle span {
     display: block;
     width: 3.3rem;
     height: 0.4rem;
     margin-bottom: 0.5rem;
     position: relative;
-
     background: #cdcdcd;
     border-radius: 0.3rem;
-
     z-index: 1;
-
     transform-origin: 0.4rem 0;
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
-
   .menuToggle span:first-child {
     transform-origin: 0% 0%;
   }
-
   .menuToggle span:nth-last-child(2) {
     transform-origin: 0% 100%;
   }
-
-  .menuToggle input:checked ~ span {
+  .menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-0.2rem, -0.1rem);
     background: #232323;
   }
-
-  .menuToggle input:checked ~ span:nth-last-child(3) {
+  .menuToggle input:checked~span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
-
-  .menuToggle input:checked ~ span:nth-last-child(2) {
+  .menuToggle input:checked~span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
-
   .menu1 {
     position: absolute;
     width: 30rem;
     margin: -10rem 0 0 -5rem;
     padding: 5rem;
     padding-top: 12.5rem;
-
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-
   .menu1 li {
     padding: 1rem 0;
     font-size: 2.2rem;
   }
-
-  .menuToggle input:checked ~ ul {
+  .menuToggle input:checked~ul {
     transform: none;
   }
   .Home .Contact .Medical .Schedule .Emergency .About {
@@ -909,7 +770,6 @@ Touch pad
   }
   /* ---------------------------------------------------------------------- */
   /* ---------------------------------aside-------------------------------- */
-
   aside {
     display: grid;
     grid-area: aside;
@@ -918,11 +778,8 @@ Touch pad
     border-radius: 1%;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(1rem, auto);
-    grid-template-areas:
-      "imgAddress imgMail"
-      "imgCall imgSms ";
+    grid-template-areas: "imgAddress imgMail" "imgCall imgSms ";
   }
-
   .imgAdresse {
     grid-area: imgAddress;
   }
@@ -958,7 +815,6 @@ Touch pad
   }
   /* ---------------------------------------------------------------------- */
   /* --------------------------------section------------------------------- */
-
   section {
     display: grid;
     grid-area: section;
@@ -967,17 +823,12 @@ Touch pad
     border-radius: 1%;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(1rem, auto);
-    grid-template-areas:
-      "p-doc1"
-      "doctor1"
-      "p-doc2"
-      "doctor2";
+    grid-template-areas: "p-doc1" "doctor1" "p-doc2" "doctor2";
   }
   .doctor1 {
     grid-area: doctor1;
     padding-left: 4.4rem;
   }
-
   .doctor2 {
     grid-area: doctor2;
     padding-left: 4.4rem;
@@ -1010,7 +861,6 @@ Touch pad
     line-height: 10rem;
     float: left;
   }
-
   /* ---------------------------------------------------------------------- */
   /* --------------------------------footer-------------------------------- */
   footer {
@@ -1031,22 +881,14 @@ Touch pad
   /* ==========================================================================
      Contact page
      ========================================================================== */
-
   .contact_content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "aside_contact aside_contact aside_contact aside_contact aside_contact"
-      "main main main main main"
-      "section section section section section"
-      "section section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "aside_contact aside_contact aside_contact aside_contact aside_contact" "main main main main main" "section section section section section" "section section section section section" "footer footer footer footer footer";
   }
-
   .gmap {
     position: relative;
     padding-bottom: 70%;
@@ -1067,7 +909,6 @@ Touch pad
     grid-auto-rows: minmax(1rem, auto);
     grid-template-areas: "infoA infoCall" "infoSms infoM";
   }
-
   .form {
     display: none;
     color: #011f26;
@@ -1093,7 +934,6 @@ Touch pad
     margin-right: 5rem;
     margin-top: 2rem;
   }
-
   .info_address {
     grid-area: infoA;
     color: #011f26;
@@ -1106,7 +946,6 @@ Touch pad
     margin-right: 5rem;
     margin-top: 2rem;
   }
-
   .info_Call {
     grid-area: infoCall;
     color: #011f26;
@@ -1119,7 +958,6 @@ Touch pad
     margin-right: 5rem;
     margin-top: 2rem;
   }
-
   .info_Sms {
     grid-area: infoSms;
     color: #011f26;
@@ -1144,25 +982,14 @@ Touch pad
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "section section section section section"
-      "section section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "section section section section section" "section section section section section" "footer footer footer footer footer";
   }
   .medical {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(1fr, 1rem);
     grid-gap: 0rem;
-    grid-template-areas:
-      "psychology doctorI"
-      "p-docI p-docI"
-      "doctolib1 doctolib1"
-      "Speech_Therapy doctorE"
-      "p-docE p-docE"
-      "doctolib2 doctolib2";
+    grid-template-areas: "psychology doctorI" "p-docI p-docI" "doctolib1 doctolib1" "Speech_Therapy doctorE" "p-docE p-docE" "doctolib2 doctolib2";
   }
   .doctorI {
     grid-area: doctorI;
@@ -1264,25 +1091,14 @@ Touch pad
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 0rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "section section section section"
-      "section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "section section section section" "section section section section" "footer footer footer footer footer";
   }
   .schedule {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(1fr, 1rem);
     grid-gap: 1rem;
-    grid-template-areas:
-      "doctor1_s"
-      "schedule1"
-      "appointment1"
-      "doctor2_s"
-      "schedule2"
-      "appointment2";
+    grid-template-areas: "doctor1_s" "schedule1" "appointment1" "doctor2_s" "schedule2" "appointment2";
   }
   .schedule1 {
     grid-area: schedule1;
@@ -1343,12 +1159,7 @@ Touch pad
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "emergency emergency emergency emergency emergency"
-      "emergency emergency emergency emergency emergency"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "emergency emergency emergency emergency emergency" "emergency emergency emergency emergency emergency" "footer footer footer footer footer";
   }
   .emergency {
     grid-area: emergency;
@@ -1357,15 +1168,7 @@ Touch pad
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(1fr 1rem);
-    grid-template-areas:
-      "icoe icoe icoe icoe"
-      "pca pca pca pca"
-      ". a15 samu ."
-      ". a18 ff ."
-      ". a112 em ."
-      ". a17 po ."
-      ". a119 cid ."
-      ". a3919 dv .";
+    grid-template-areas: "icoe icoe icoe icoe" "pca pca pca pca" ". a15 samu ." ". a18 ff ." ". a112 em ." ". a17 po ." ". a119 cid ." ". a3919 dv .";
   }
   .icoe {
     grid-area: icoe;
@@ -1486,14 +1289,8 @@ Touch pad
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "aboutUs aboutUs aboutUs aboutUs aboutUs"
-      "aboutUs aboutUs aboutUs aboutUs aboutUs"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "aboutUs aboutUs aboutUs aboutUs aboutUs" "aboutUs aboutUs aboutUs aboutUs aboutUs" "footer footer footer footer footer";
   }
-
   .aboutUs {
     grid-area: aboutUs;
     display: grid;
@@ -1501,9 +1298,7 @@ Touch pad
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(1fr 1rem);
-    grid-template-areas:
-      "logo_about p1_about p1_about p1_about"
-      ". p2_about p2_about p2_about";
+    grid-template-areas: "logo_about p1_about p1_about p1_about" ". p2_about p2_about p2_about";
   }
   .logo_about {
     grid-area: logo_about;
@@ -1543,6 +1338,7 @@ Touch pad
     display: none;
   }
 }
+
 /* ==========================================================================
    ==========================================================================
    ==========================================================================
@@ -1554,6 +1350,7 @@ mini desktop
    ==========================================================================
    ==========================================================================
    ========================================================================== */
+
 @media screen and (min-width: 1068px) and (max-width: 1661px) {
   /* ==========================================================================
    home page
@@ -1564,45 +1361,31 @@ mini desktop
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav nav . . header"
-      "aside aside aside aside aside"
-      "main main main main main"
-      "section section section section section"
-      "section section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav nav . . header" "aside aside aside aside aside" "main main main main main" "section section section section section" "section section section section section" "footer footer footer footer footer";
   }
-
   header {
     grid-area: header;
   }
-
   /* ---------------------------------------------------------------------- */
   /* --------------------------------Nav bar------------------------------- */
   /* burger */
   a {
     text-decoration: none;
     color: #011f26;
-
     transition: color 0.3s ease;
   }
-
   a:hover {
     color: potato;
   }
-
   .menuToggle {
     display: block;
     position: fixed;
     top: 7rem;
     left: 1rem;
-
     z-index: 1;
-
     -webkit-user-select: none;
     user-select: none;
   }
-
   .menuToggle input {
     display: block;
     width: 7rem;
@@ -1610,79 +1393,59 @@ mini desktop
     position: absolute;
     top: -0.7rem;
     left: -0.5rem;
-
     cursor: pointer;
-
     opacity: 0;
     z-index: 2;
-
     -webkit-touch-callout: none;
   }
-
   .menuToggle span {
     display: block;
     width: 3.3rem;
     height: 0.4rem;
     margin-bottom: 0.5rem;
     position: relative;
-
     background: #cdcdcd;
     border-radius: 0.3rem;
-
     z-index: 1;
-
     transform-origin: 0.4rem 0;
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
-
   .menuToggle span:first-child {
     transform-origin: 0% 0%;
   }
-
   .menuToggle span:nth-last-child(2) {
     transform-origin: 0% 100%;
   }
-
-  .menuToggle input:checked ~ span {
+  .menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-0.2rem, -0.1rem);
     background: #232323;
   }
-
-  .menuToggle input:checked ~ span:nth-last-child(3) {
+  .menuToggle input:checked~span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
-
-  .menuToggle input:checked ~ span:nth-last-child(2) {
+  .menuToggle input:checked~span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
-
   .menu1 {
     position: absolute;
     width: 30rem;
     margin: -10rem 0 0 -5rem;
     padding: 5rem;
     padding-top: 12.5rem;
-
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-
   .menu1 li {
     padding: 1rem 0;
     font-size: 2.2rem;
   }
-
-  .menuToggle input:checked ~ ul {
+  .menuToggle input:checked~ul {
     transform: none;
   }
   .Home .Contact .Medical .Schedule .Emergency .About {
@@ -1704,7 +1467,6 @@ mini desktop
   }
   /* ---------------------------------------------------------------------- */
   /* ---------------------------------aside-------------------------------- */
-
   aside {
     display: grid;
     grid-area: aside;
@@ -1715,7 +1477,6 @@ mini desktop
     grid-auto-rows: minmax(1rem, auto);
     grid-template-areas: "imgAddress address imgMail mail imgCall call imgSms sms";
   }
-
   .imgAdresse {
     grid-area: imgAddress;
   }
@@ -1756,7 +1517,6 @@ mini desktop
     font-size: 1.2rem;
     text-align: center;
   }
-
   .icon_index {
     text-decoration: none;
     padding: 1.25rem 1.87rem;
@@ -1768,7 +1528,6 @@ mini desktop
   }
   /* ---------------------------------------------------------------------- */
   /* --------------------------------section------------------------------- */
-
   section {
     display: grid;
     grid-area: section;
@@ -1777,17 +1536,12 @@ mini desktop
     border-radius: 1%;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(1rem, auto);
-    grid-template-areas:
-      "p-doc1"
-      "doctor1"
-      "p-doc2"
-      "doctor2";
+    grid-template-areas: "p-doc1" "doctor1" "p-doc2" "doctor2";
   }
   .doctor1 {
     grid-area: doctor1;
     padding-left: 4.4rem;
   }
-
   .doctor2 {
     grid-area: doctor2;
     padding-left: 4.4rem;
@@ -1828,7 +1582,6 @@ mini desktop
     line-height: 10rem;
     float: left;
   }
-
   /* ---------------------------------------------------------------------- */
   /* --------------------------------footer-------------------------------- */
   footer {
@@ -1849,20 +1602,13 @@ mini desktop
   /* ==========================================================================
    Contact page
    ========================================================================== */
-
   .contact_content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "aside_contact aside_contact aside_contact aside_contact aside_contact"
-      "main main main main main"
-      "section section section section section"
-      "section section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "aside_contact aside_contact aside_contact aside_contact aside_contact" "main main main main main" "section section section section section" "section section section section section" "footer footer footer footer footer";
   }
   .gmap {
     position: relative;
@@ -1884,7 +1630,6 @@ mini desktop
     grid-auto-rows: minmax(1rem, auto);
     grid-template-areas: "infoA infoCall infoSms infoM";
   }
-
   .form {
     display: none;
     color: #011f26;
@@ -1910,7 +1655,6 @@ mini desktop
     margin-right: 5rem;
     margin-top: 2rem;
   }
-
   .info_address {
     grid-area: infoA;
     color: #011f26;
@@ -1923,7 +1667,6 @@ mini desktop
     margin-right: 5rem;
     margin-top: 2rem;
   }
-
   .info_Call {
     grid-area: infoCall;
     color: #011f26;
@@ -1936,7 +1679,6 @@ mini desktop
     margin-right: 5rem;
     margin-top: 2rem;
   }
-
   .info_Sms {
     grid-area: infoSms;
     color: #011f26;
@@ -1961,25 +1703,14 @@ mini desktop
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "section section section section section"
-      "section section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "section section section section section" "section section section section section" "footer footer footer footer footer";
   }
   .medical {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(1fr, 1rem);
     grid-gap: 0rem;
-    grid-template-areas:
-      "psychology doctorI"
-      "p-docI p-docI"
-      "doctolib1 doctolib1"
-      "Speech_Therapy doctorE"
-      "p-docE p-docE"
-      "doctolib2 doctolib2";
+    grid-template-areas: "psychology doctorI" "p-docI p-docI" "doctolib1 doctolib1" "Speech_Therapy doctorE" "p-docE p-docE" "doctolib2 doctolib2";
   }
   .doctorI {
     grid-area: doctorI;
@@ -2081,25 +1812,14 @@ mini desktop
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 0rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "section section section section"
-      "section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "section section section section" "section section section section" "footer footer footer footer footer";
   }
   .schedule {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(1fr, 1rem);
     grid-gap: 1rem;
-    grid-template-areas:
-      "doctor1_s"
-      "schedule1"
-      "appointment1"
-      "doctor2_s"
-      "schedule2"
-      "appointment2";
+    grid-template-areas: "doctor1_s" "schedule1" "appointment1" "doctor2_s" "schedule2" "appointment2";
   }
   .schedule1 {
     grid-area: schedule1;
@@ -2160,12 +1880,7 @@ mini desktop
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "emergency emergency emergency emergency emergency"
-      "emergency emergency emergency emergency emergency"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "emergency emergency emergency emergency emergency" "emergency emergency emergency emergency emergency" "footer footer footer footer footer";
   }
   .emergency {
     grid-area: emergency;
@@ -2174,15 +1889,7 @@ mini desktop
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(1fr 1rem);
-    grid-template-areas:
-      "icoe icoe icoe icoe"
-      "pca pca pca pca"
-      ". a15 samu ."
-      ". a18 ff ."
-      ". a112 em ."
-      ". a17 po ."
-      ". a119 cid ."
-      ". a3919 dv .";
+    grid-template-areas: "icoe icoe icoe icoe" "pca pca pca pca" ". a15 samu ." ". a18 ff ." ". a112 em ." ". a17 po ." ". a119 cid ." ". a3919 dv .";
   }
   .icoe {
     grid-area: icoe;
@@ -2303,14 +2010,8 @@ mini desktop
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "nav . . . header"
-      "main main main main main"
-      "aboutUs aboutUs aboutUs aboutUs aboutUs"
-      "aboutUs aboutUs aboutUs aboutUs aboutUs"
-      "footer footer footer footer footer";
+    grid-template-areas: "nav . . . header" "main main main main main" "aboutUs aboutUs aboutUs aboutUs aboutUs" "aboutUs aboutUs aboutUs aboutUs aboutUs" "footer footer footer footer footer";
   }
-
   .aboutUs {
     grid-area: aboutUs;
     display: grid;
@@ -2318,9 +2019,7 @@ mini desktop
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(1fr 1rem);
-    grid-template-areas:
-      "logo_about p1_about p1_about p1_about"
-      ". p2_about p2_about p2_about";
+    grid-template-areas: "logo_about p1_about p1_about p1_about" ". p2_about p2_about p2_about";
   }
   .logo_about {
     grid-area: logo_about;
@@ -2360,6 +2059,7 @@ mini desktop
     display: none;
   }
 }
+
 /* ==========================================================================
    ==========================================================================
    ==========================================================================
@@ -2379,24 +2079,16 @@ mini desktop
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "header nav nav nav ."
-      "main main main main main"
-      "section section section section aside"
-      "section section section section aside"
-      "footer footer footer footer footer";
+    grid-template-areas: "header nav nav nav ." "main main main main main" "section section section section aside" "section section section section aside" "footer footer footer footer footer";
   }
-
   header {
     grid-area: header;
   }
-
   /* ---------------------------------------------------------------------- */
   /* --------------------------------Nav bar------------------------------- */
   .menuToggle {
     display: none;
   }
-
   nav {
     grid-area: nav;
   }
@@ -2415,9 +2107,7 @@ mini desktop
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: (1rem, auto);
     grid-gap: 1rem;
-    grid-template-areas:
-      "x x x x x x"
-      "H contact medical schedule emergency about";
+    grid-template-areas: "x x x x x x" "H contact medical schedule emergency about";
   }
   .nothing {
     grid-area: x;
@@ -2440,7 +2130,6 @@ mini desktop
   .About {
     grid-area: about;
   }
-
   .Home:hover {
     border-top: 5px solid #0578a6;
     background-color: #8fadbf;
@@ -2448,7 +2137,6 @@ mini desktop
     border-radius: 3%;
     color: #011f26;
   }
-
   .Contact:hover {
     border-top: 5px solid #0578a6;
     background-color: #8fadbf;
@@ -2456,7 +2144,6 @@ mini desktop
     border-radius: 3%;
     color: #011f26;
   }
-
   .Medical:hover {
     border-top: 5px solid #0578a6;
     background-color: #8fadbf;
@@ -2471,7 +2158,6 @@ mini desktop
     border-radius: 3%;
     color: #011f26;
   }
-
   .Emergency:hover {
     border-top: 5px solid #0578a6;
     background-color: #f34949;
@@ -2479,7 +2165,6 @@ mini desktop
     border-radius: 3%;
     color: #011f26;
   }
-
   .About:hover {
     border-top: 5px solid #0578a6;
     background-color: #8fadbf;
@@ -2502,7 +2187,6 @@ mini desktop
   }
   /* ---------------------------------------------------------------------- */
   /* ---------------------------------aside-------------------------------- */
-
   aside {
     display: grid;
     grid-area: aside;
@@ -2511,13 +2195,8 @@ mini desktop
     border-radius: 1%;
     grid-template-columns: 3fr 1fr;
     grid-auto-rows: minmax(1rem, auto);
-    grid-template-areas:
-      "imgAddress address"
-      "imgMail mail"
-      "imgCall call"
-      "imgSms sms";
+    grid-template-areas: "imgAddress address" "imgMail mail" "imgCall call" "imgSms sms";
   }
-
   .imgAdresse {
     grid-area: imgAddress;
   }
@@ -2558,7 +2237,6 @@ mini desktop
     font-size: 1.2rem;
     text-align: center;
   }
-
   .icon_index {
     text-decoration: none;
     padding: 1.25rem 1.87rem;
@@ -2570,7 +2248,6 @@ mini desktop
   }
   /* ---------------------------------------------------------------------- */
   /* --------------------------------section------------------------------- */
-
   section {
     display: grid;
     grid-area: section;
@@ -2579,15 +2256,12 @@ mini desktop
     border-radius: 1%;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(1rem, auto);
-    grid-template-areas:
-      "p-doc1 p-doc2"
-      "doctor1 doctor2";
+    grid-template-areas: "p-doc1 p-doc2" "doctor1 doctor2";
   }
   .doctor1 {
     grid-area: doctor1;
     padding-left: 4.4rem;
   }
-
   .doctor2 {
     grid-area: doctor2;
     padding-left: 4.4rem;
@@ -2628,7 +2302,6 @@ mini desktop
     line-height: 10rem;
     float: left;
   }
-
   /* ---------------------------------------------------------------------- */
   /* --------------------------------footer-------------------------------- */
   * footer {
@@ -2645,23 +2318,16 @@ mini desktop
   .return {
     display: none;
   }
-
   /* ==========================================================================
    Contact page
    ========================================================================== */
-
   .contact_content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "header nav nav nav ."
-      "main main main main main"
-      "section section section section aside_contact"
-      "section section section section aside_contact"
-      "footer footer footer footer footer";
+    grid-template-areas: "header nav nav nav ." "main main main main main" "section section section section aside_contact" "section section section section aside_contact" "footer footer footer footer footer";
   }
   .map {
     display: flex;
@@ -2673,18 +2339,8 @@ mini desktop
     grid-template-columns: 1fr 1fr;
     grid-gap: 0rem;
     grid-auto-rows: minmax(1rem, 4rem);
-    grid-template-areas:
-      "infoA infoA "
-      "infoCall infoCall"
-      "infoSms infoSms"
-      "infoM infoM"
-      "formN formN"
-      "formS formS"
-      "formM formM"
-      "formMsg formMsg"
-      "formSub formSub";
+    grid-template-areas: "infoA infoA " "infoCall infoCall" "infoSms infoSms" "infoM infoM" "formN formN" "formS formS" "formM formM" "formMsg formMsg" "formSub formSub";
   }
-
   .form {
     color: #011f26;
     font-family: "Poppins";
@@ -2709,7 +2365,6 @@ mini desktop
     margin-right: 5rem;
     margin-top: 2rem;
   }
-
   .info_address {
     grid-area: infoA;
     color: #011f26;
@@ -2722,7 +2377,6 @@ mini desktop
     margin-right: 5rem;
     margin-top: 2rem;
   }
-
   .formName {
     grid-area: formN;
   }
@@ -2738,7 +2392,6 @@ mini desktop
   .formSubmit {
     grid-area: formSub;
   }
-
   .info_Call {
     grid-area: infoCall;
     color: #011f26;
@@ -2751,7 +2404,6 @@ mini desktop
     margin-right: 5rem;
     margin-top: 2rem;
   }
-
   .info_Sms {
     grid-area: infoSms;
     color: #011f26;
@@ -2776,22 +2428,14 @@ mini desktop
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "header nav nav nav ."
-      "main main main main main"
-      "section section section section section"
-      "section section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "header nav nav nav ." "main main main main main" "section section section section section" "section section section section section" "footer footer footer footer footer";
   }
   .medical {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(1fr, 1rem);
     grid-gap: 0rem;
-    grid-template-areas:
-      "psychology doctorI Speech_Therapy doctorE"
-      "p-docI p-docI p-docE p-docE"
-      "doctolib1 doctolib1 doctolib2 doctolib2";
+    grid-template-areas: "psychology doctorI Speech_Therapy doctorE" "p-docI p-docI p-docE p-docE" "doctolib1 doctolib1 doctolib2 doctolib2";
   }
   .doctorI {
     grid-area: doctorI;
@@ -2884,7 +2528,6 @@ mini desktop
     line-height: 10rem;
     float: left;
   }
-
   /* ==========================================================================
    Schedule page
    ========================================================================== */
@@ -2894,22 +2537,14 @@ mini desktop
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 0rem;
     margin: 0 auto;
-    grid-template-areas:
-      "header nav nav nav ."
-      "main main main main main"
-      "section section section section"
-      "section section section section"
-      "footer footer footer footer footer";
+    grid-template-areas: "header nav nav nav ." "main main main main main" "section section section section" "section section section section" "footer footer footer footer footer";
   }
   .schedule {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(1fr, 1rem);
     grid-gap: 2rem;
-    grid-template-areas:
-      "doctor1_s doctor2_s"
-      "schedule1 schedule2"
-      "appointment1 appointment2";
+    grid-template-areas: "doctor1_s doctor2_s" "schedule1 schedule2" "appointment1 appointment2";
   }
   .schedule1 {
     grid-area: schedule1;
@@ -2961,7 +2596,6 @@ mini desktop
     margin-right: 5rem;
     margin-top: 2rem;
   }
-
   /* ==========================================================================
    emergency page
    ========================================================================== */
@@ -2971,12 +2605,7 @@ mini desktop
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "header nav nav nav ."
-      "main main main main main"
-      "emergency emergency emergency emergency emergency"
-      "emergency emergency emergency emergency emergency"
-      "footer footer footer footer footer";
+    grid-template-areas: "header nav nav nav ." "main main main main main" "emergency emergency emergency emergency emergency" "emergency emergency emergency emergency emergency" "footer footer footer footer footer";
   }
   .emergency {
     grid-area: emergency;
@@ -2985,15 +2614,7 @@ mini desktop
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(1fr 1rem);
-    grid-template-areas:
-      "icoe icoe icoe icoe"
-      "pca pca pca pca"
-      ". a15 samu ."
-      ". a18 ff ."
-      ". a112 em ."
-      ". a17 po ."
-      ". a119 cid ."
-      ". a3919 dv .";
+    grid-template-areas: "icoe icoe icoe icoe" "pca pca pca pca" ". a15 samu ." ". a18 ff ." ". a112 em ." ". a17 po ." ". a119 cid ." ". a3919 dv .";
   }
   .icoe {
     grid-area: icoe;
@@ -3114,14 +2735,8 @@ mini desktop
     grid-auto-rows: minmax(5rem, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    grid-template-areas:
-      "header nav nav nav ."
-      "main main main main main"
-      "aboutUs aboutUs aboutUs aboutUs aboutUs"
-      "aboutUs aboutUs aboutUs aboutUs aboutUs"
-      "footer footer footer footer footer";
+    grid-template-areas: "header nav nav nav ." "main main main main main" "aboutUs aboutUs aboutUs aboutUs aboutUs" "aboutUs aboutUs aboutUs aboutUs aboutUs" "footer footer footer footer footer";
   }
-
   .aboutUs {
     grid-area: aboutUs;
     display: grid;
@@ -3129,10 +2744,7 @@ mini desktop
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(1fr 1rem);
-    grid-template-areas:
-      "logo_about p1_about p1_about p1_about"
-      ". p2_about p2_about p2_about"
-      ". . p_name p_name";
+    grid-template-areas: "logo_about p1_about p1_about p1_about" ". p2_about p2_about p2_about" ". . p_name p_name";
   }
   .logo_about {
     grid-area: logo_about;
